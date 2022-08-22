@@ -5,14 +5,10 @@
  */
 package etl_to_csv;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -32,18 +28,9 @@ public class ExportCSV extends javax.swing.JFrame {
     
     public ExportCSV() {
         initComponents();
-        jLabelProcessing.setVisible(false);
+        jLabelProcessing.setVisible(true);
     }
-    
-    private void Show_Results(Process p) throws IOException 
-    {
-        BufferedReader output_reader = new BufferedReader( new InputStreamReader( p.getInputStream() ) );
-        String output = "";
-        while ((output = output_reader.readLine()) != null) {
-            System.out.println(output);
-        }
-    }
-    
+        
     private void RemoveTableRows( DefaultTableModel myTableModel )
     {  
         if( myTableModel.getRowCount() > 0 ) 
@@ -80,6 +67,7 @@ public class ExportCSV extends javax.swing.JFrame {
         jLabelProcessing = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ETL to CSV Exporter");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
         jLabel1.setText("Export ETL Traces as CSV");
@@ -195,7 +183,7 @@ public class ExportCSV extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jLabelProcessing.setText("Processing:");
+        jLabelProcessing.setText("Processing: Nothing.....");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -316,24 +304,27 @@ public class ExportCSV extends javax.swing.JFrame {
             ProcessBuilder builder = new ProcessBuilder( "cmd.exe", "/c", command );        
             builder = builder.directory( new File( m_RootFolderPath ) );
             
-            try {
+            try 
+            {
                 builder.redirectErrorStream(true);
                 Process process = builder.start();
                 jLabelProcessing.setText("Processing " + fileName );
                 jLabelProcessing.setVisible(true);
-                //Show_Results(p);
+                
                 process.waitFor(300, TimeUnit.SECONDS);
                 process.destroyForcibly();
                 process.waitFor();
-            } catch (IOException ex) {            
+                
+            } 
+            catch (IOException ex) 
+            {            
                 JOptionPane.showMessageDialog(null, "Failed to run cmd command "+ex);
-            } catch (InterruptedException ex) {
+            } 
+            catch (InterruptedException ex) 
+            {
                 JOptionPane.showMessageDialog(null, "Command Line Thread "+ex);
             } 
         }
-
-        
-        
     }//GEN-LAST:event_btnExtractCSVActionPerformed
 
     /**
