@@ -324,25 +324,25 @@ public class ExportCSV extends javax.swing.JFrame {
 
     private void jRadioButtonCPUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCPUActionPerformed
         m_ProfileDirectory = "CPU_Profile";
-        m_WPRProfile = m_ProfilePath + "CPUProfile.wpaProfile";        
+        m_WPRProfile = "CPUProfile.wpaProfile";        
         m_RadioButtonSelectedFlag = true;
     }//GEN-LAST:event_jRadioButtonCPUActionPerformed
 
     private void jRadioButtonGPUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonGPUActionPerformed
         m_ProfileDirectory = "GPU_Profile";
-        m_WPRProfile = m_ProfilePath + "GPUProfile.wpaProfile";        
+        m_WPRProfile = "GPUProfile.wpaProfile";        
         m_RadioButtonSelectedFlag = true;
     }//GEN-LAST:event_jRadioButtonGPUActionPerformed
 
     private void jRadioButtonMemoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonMemoryActionPerformed
         m_ProfileDirectory = "Memory_Profile";
-        m_WPRProfile = m_ProfilePath + "MemoryProfile.wpaProfile";        
+        m_WPRProfile = "MemoryProfile.wpaProfile";        
         m_RadioButtonSelectedFlag = true;
     }//GEN-LAST:event_jRadioButtonMemoryActionPerformed
 
     private void jRadioButtonStorageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonStorageActionPerformed
         m_ProfileDirectory = "Storage_Profile";
-        m_WPRProfile = m_ProfilePath + "StorageProfile.wpaProfile";        
+        m_WPRProfile = "StorageProfile.wpaProfile";        
         m_RadioButtonSelectedFlag = true;
     }//GEN-LAST:event_jRadioButtonStorageActionPerformed
 
