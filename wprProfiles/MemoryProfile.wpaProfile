@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WpaProfileContainer xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://tempuri.org/SerializableElement.xsd">
+  <Content xsi:type="WpaProfile2">
+    <Sessions>
+      <Session Index="0">
+        <FileReferences />
+      </Session>
+    </Sessions>
+    <Views>
+      <View Guid="67b8486a-9cc3-4d36-978b-cfc07051f750" IsVisible="true" Title="Analysis">
+        <Graphs>
+          <Graph Guid="cb079a8b-de14-4516-9f83-6c5695b0845a" LayoutStyle="All" Color="#FF0000FF" GraphHeight="125" IsMinimized="false" IsShown="true" IsExpanded="false">
+            <Preset Name="Utilization by Category" GraphChartType="StackedLine" BarGraphIntervalCount="50" IsThreadActivityTable="false" GraphColumnCount="9" KeyColumnCount="2" LeftFrozenColumnCount="0" RightFrozenColumnCount="8" InitialFilterShouldKeep="true" InitialSelectionQuery="([Series Name]:=&quot;Category&quot; AND ([Category]:=&quot;In Use List&quot; OR [Category]:=&quot;Modified List&quot; OR [Category]:=&quot;Zero and Free Lists&quot; OR [Category]:=&quot;Standby Lists (Total)&quot;))" GraphFilterTopValue="0" GraphFilterThresholdValue="0">
+              <MetadataEntries>
+                <MetadataEntry Guid="8cce8904-07d9-57f3-a2e7-45aefe82cd8d" Name="Time" ColumnMetadata="StartTime" />
+                <MetadataEntry Guid="4cab50d6-c78a-51ef-4034-ced3dca9b5ce" Name="Duration" ColumnMetadata="Duration" />
+              </MetadataEntries>
+              <HighlightEntries />
+              <Columns>
+                <Column Guid="2716c11d-010e-5e24-4943-6e4e772bc63a" Name="Category" SortOrder="Ascending" SortPriority="0" Width="150" IsVisible="true" />
+                <Column Guid="cb796d44-2927-5ac1-d231-4b71904c18f5" Name="Thread Name" SortPriority="0" Width="80" IsVisible="false" />
+                <Column Guid="82ddfdff-ee93-5f35-08ac-4705069618dc" Name="Thread Activity Tag" SortPriority="0" Width="80" IsVisible="false" />
+                <Column Guid="2818954f-2d30-5569-4510-dade0a5a605c" Name="Annotation" SortPriority="0" Width="80" IsVisible="false" />
+                <Column Guid="8cce8904-07d9-57f3-a2e7-45aefe82cd8d" Name="Time" SortPriority="3" TextAlignment="Right" Width="100" IsVisible="true" />
+                <Column Guid="4cab50d6-c78a-51ef-4034-ced3dca9b5ce" Name="Duration" AggregationMode="Sum" SortPriority="4" TextAlignment="Right" Width="100" IsVisible="false" />
+                <Column Guid="251239f0-e61e-578d-4898-fcb4ab76b5cf" Name="Size" AggregationMode="Max" SortPriority="2" TextAlignment="Right" Width="100" CellFormat="MB" IsVisible="true" />
+              </Columns>
+            </Preset>
+          </Graph>
+        </Graphs>
+        <SessionIndices>
+          <SessionIndex>0</SessionIndex>
+        </SessionIndices>
+      </View>
+    </Views>
+    <ModifiedGraphs>
+      <GraphSchema Guid="cb079a8b-de14-4516-9f83-6c5695b0845a">
+        <ModifiedPresets />
+        <PersistedPresets>
+          <Preset Name="Utilization by Category" GraphChartType="StackedLine" BarGraphIntervalCount="50" IsThreadActivityTable="false" GraphColumnCount="9" KeyColumnCount="2" LeftFrozenColumnCount="0" RightFrozenColumnCount="8" InitialFilterShouldKeep="true" InitialSelectionQuery="([Series Name]:=&quot;Category&quot; AND ([Category]:=&quot;In Use List&quot; OR [Category]:=&quot;Modified List&quot; OR [Category]:=&quot;Zero and Free Lists&quot; OR [Category]:=&quot;Standby Lists (Total)&quot;))" GraphFilterTopValue="0" GraphFilterThresholdValue="0">
+            <MetadataEntries>
+              <MetadataEntry Guid="8cce8904-07d9-57f3-a2e7-45aefe82cd8d" Name="Time" ColumnMetadata="StartTime" />
+              <MetadataEntry Guid="4cab50d6-c78a-51ef-4034-ced3dca9b5ce" Name="Duration" ColumnMetadata="Duration" />
+            </MetadataEntries>
+            <HighlightEntries />
+            <Columns>
+              <Column Guid="2716c11d-010e-5e24-4943-6e4e772bc63a" Name="Category" SortOrder="Ascending" SortPriority="0" Width="150" IsVisible="true" />
+              <Column Guid="cb796d44-2927-5ac1-d231-4b71904c18f5" Name="Thread Name" SortPriority="0" Width="80" IsVisible="false" />
+              <Column Guid="82ddfdff-ee93-5f35-08ac-4705069618dc" Name="Thread Activity Tag" SortPriority="0" Width="80" IsVisible="false" />
+              <Column Guid="2818954f-2d30-5569-4510-dade0a5a605c" Name="Annotation" SortPriority="0" Width="80" IsVisible="false" />
+              <Column Guid="8cce8904-07d9-57f3-a2e7-45aefe82cd8d" Name="Time" SortPriority="3" TextAlignment="Right" Width="100" IsVisible="true" />
+              <Column Guid="4cab50d6-c78a-51ef-4034-ced3dca9b5ce" Name="Duration" AggregationMode="Sum" SortPriority="4" TextAlignment="Right" Width="100" IsVisible="false" />
+              <Column Guid="251239f0-e61e-578d-4898-fcb4ab76b5cf" Name="Size" AggregationMode="Max" SortPriority="2" TextAlignment="Right" Width="100" CellFormat="MB" IsVisible="true" />
+            </Columns>
+          </Preset>
+        </PersistedPresets>
+      </GraphSchema>
+    </ModifiedGraphs>
+  </Content>
+</WpaProfileContainer>
